@@ -13,8 +13,8 @@ async function startSock() {
     const { state, saveCreds } = await useMultiFileAuthState('./auth_info');
 
     sock = makeWASocket({
-        logger: pino({ level: 'silent' }),
         auth: state,
+        logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
         browser: ['Gavetas API', 'Chrome', '1.0.0']
     });
@@ -76,4 +76,4 @@ app.get('/estado', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
+app.listen(PORT,'0.0.0.0', () => console.log(`Servidor en puerto ${PORT}`));
