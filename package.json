@@ -1,0 +1,18 @@
+{
+  "name": "prueba2",
+  "version": "1.0.0",
+  "description": "Bot WhatsApp con Baileys",
+  "main": "indi.js",
+  "scripts": {
+    "start": "node indi.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.9",
+    "@hapi/boom": "^10.0.1",
+    "express": "^4.19.2",
+    "axios": "^1.7.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
